@@ -4,7 +4,7 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
       xmlns:h="http://java.sun.com/jsf/html"
-      > 
+      > ^
     
     <body>
         
@@ -19,9 +19,15 @@
 <!--                <p:message/> not now!! -->
                     <p:panel header="Enter Customer Information" >
                         <h:panelGrid columns="2">
-                            <h:outputLabel for="firstName" value="First Name" styleClass="requiredLbl" />
+                            <h:outputLabel for="firstName" value="First Name" styleClass= "requiredLbl" />
                             <h:inputText id="firstName" label="First Name" value="#{customerBeen.firstname}" required="true" />
-                            
+                            <h:outputLabel for="middleName" value="Middle Name" styleClass="optionalLbl" />
+                            <h:inputText id="middleName" label="Middle Name" value="#{customerBeen.middleName}" />
+                            <h:outputLabel for="lastName" value="Last Name" styleClass= "requiredLbl" />
+                            <h:inputText id="lastName" label="Last Name" value="#{customerBeen.lastName}" required="true" />
+                            <h:outputLabel for="blrthDate" value="Date of Birth" styleClass="optionalLbl" />
+                            <p:calendar id="birthDate" value="#{customerBeen.birthDate}" showOn="button"  navigator="true" />
+                            <h:panelGroup />
                         </h:panelGrid>
                     </p:panel>
                 </h:form>
