@@ -5,6 +5,7 @@
  */
 package com.beens;
 
+import java.util.Date;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
@@ -25,7 +26,7 @@ public class CustomerBeen {
     private String firstname;
     private String middleName;
     private String lastName;
-    private int birthDate;
+    private Date birthDate;
 
     public String getFirstname() {
         return firstname;
@@ -39,7 +40,7 @@ public class CustomerBeen {
         return lastName;
     }
 
-    public int getBirthDate() {
+    public Date getBirthDate() {
         return birthDate;
     }
 
@@ -55,7 +56,7 @@ public class CustomerBeen {
         this.lastName = lastName;
     }
 
-    public void setBirthDate(int birthDate) {
+    public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
     

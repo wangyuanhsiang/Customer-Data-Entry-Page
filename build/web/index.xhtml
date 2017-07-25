@@ -4,9 +4,9 @@
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:p="http://primefaces.org/ui"
       xmlns:h="http://java.sun.com/jsf/html"
-      > ^
+      > 
     
-    <body>
+    <body> 
         
         <ui:composition template="./template.xhtml">
             
@@ -16,7 +16,7 @@
 
             <ui:define name="content">
                 <h:form>
-<!--                <p:message/> not now!! -->
+                <p:messages /> 
                     <p:panel header="Enter Customer Information" >
                         <h:panelGrid columns="2">
                             <h:outputLabel for="firstName" value="First Name" styleClass= "requiredLbl" />
@@ -28,6 +28,7 @@
                             <h:outputLabel for="blrthDate" value="Date of Birth" styleClass="optionalLbl" />
                             <p:calendar id="birthDate" value="#{customerBeen.birthDate}" showOn="button"  navigator="true" />
                             <h:panelGroup />
+                            <p:commandButton value="Submit" action="#{customerController.saveCustomer}" ajax="false" />
                         </h:panelGrid>
                     </p:panel>
                 </h:form>
