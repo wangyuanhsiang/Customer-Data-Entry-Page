@@ -23,7 +23,7 @@ public class customerController {
     }
     
     public String saveCustomer(){
-    
-     return "confirmation";
+//      will build real saving fountion here after building a database 
+     return "Personal data are confirmed!!!";
     }
 }

@@ -18,7 +18,7 @@
                 <h:form>
                 <p:messages /> 
                     <p:panel header="Enter Customer Information" >
-                        <h:panelGrid columns="2">
+                        <h:panelGrid columns="2" columnClasses="ui-grid-col-4,ui-grid-col-8" >
                             <h:outputLabel for="firstName" value="First Name" styleClass= "requiredLbl" />
                             <h:inputText id="firstName" label="First Name" value="#{customerBeen.firstname}" required="true" />
                             <h:outputLabel for="middleName" value="Middle Name" styleClass="optionalLbl" />
@@ -28,7 +28,7 @@
                             <h:outputLabel for="blrthDate" value="Date of Birth" styleClass="optionalLbl" />
                             <p:calendar id="birthDate" value="#{customerBeen.birthDate}" showOn="button"  navigator="true" />
                             <h:panelGroup />
-                            <p:commandButton value="Submit" action="#{customerController.saveCustomer}" ajax="false" />
+                            <p:commandButton value="Submit" action="confirmation" onclick="#{customerController.saveCustomer()}" />
                         </h:panelGrid>
                     </p:panel>
                 </h:form>

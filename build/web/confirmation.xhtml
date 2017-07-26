@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+        <title>Confirmation Page</title>
+    </h:head>
+    <h:body>
+        <p:panel header="Enter Customer Information" >
+            <p:panelGrid columns="2" columnClasses="rightalign-bold, normal">
+                <h:outputText value="First Name" />
+                <h:outputText value="#{customerBeen.firstname}" />
+                <h:outputText value="Middle Name" />
+                <h:outputText value="#{customerBeen.middleName}" />
+                <h:outputText value="Last Name" />
+                <h:outputText value="#{customerBeen.lastName}" />
+                <h:outputText value="Date of Birth" />
+                <h:outputText value="#{customerBeen.getformatDate()}" />
+                <h:outputText value="Result :" />
+                <h:outputText value="#{customerController.saveCustomer()}" />
+            </p:panelGrid>
+        </p:panel>
+    </h:body>
+</html>
+

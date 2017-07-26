@@ -6,6 +6,7 @@
 package com.beens;
 
 import java.util.Date;
+import java.text.SimpleDateFormat;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
@@ -22,10 +23,11 @@ public class CustomerBeen {
      */
     public CustomerBeen() {
     }
-    
+
     private String firstname;
     private String middleName;
     private String lastName;
+//    private String formatDate;
     private Date birthDate;
 
     public String getFirstname() {
@@ -41,7 +43,14 @@ public class CustomerBeen {
     }
 
     public Date getBirthDate() {
+//        SimpleDateFormat sdf = new SimpleDateFormat();
+//        return sdf.format(birthDate);
         return birthDate;
+    }
+
+    public String getformatDate() {
+        SimpleDateFormat sdf = new SimpleDateFormat();
+        return sdf.format(birthDate);
     }
 
     public void setFirstname(String firstname) {
@@ -59,6 +68,5 @@ public class CustomerBeen {
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
-    
-    
+
 }
